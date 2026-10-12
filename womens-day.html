@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chúc mừng 20/10 💐</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Be+Vietnam+Pro:wght@300;400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a0b14;--rose:#e0264f;--rose2:#ff8fa8;--gold:#f5d28a;--orange:#f5a04a;--text:#fff1f5;--muted:#d9aebf}
+.cat{width:clamp(110px,24vw,160px);height:auto;display:block;margin:0 auto;filter:drop-shadow(0 10px 24px rgba(245,160,74,.35))}
+.cat .ear-l,.cat .ear-r{transform-box:fill-box;transform-origin:bottom center;animation:ear 5s infinite}
+.cat .ear-r{animation-delay:.2s}
+@keyframes ear{0%,90%,100%{transform:rotate(0)}94%{transform:rotate(-8deg)}}
+.cat .eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.duo{display:flex;align-items:flex-end;justify-content:center;gap:6px}
+.duo .rose{font-size:clamp(60px,14vw,100px);filter:drop-shadow(0 10px 28px rgba(224,38,79,.55));animation:sway 4s ease-in-out infinite;transform-origin:bottom center}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.script{font-family:'Dancing Script',cursive}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1}
+
+/* ===== LOCK SCREEN ===== */
+#lock{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;
+  background:radial-gradient(ellipse at 50% 20%,#53183a 0%,var(--bg) 70%);transition:opacity .9s ease,transform .9s ease}
+#lock.hide{opacity:0;transform:scale(1.08);pointer-events:none}
+.gift{font-size:56px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+#lock h1{font-size:clamp(26px,6vw,38px);margin:10px 0 4px}
+#lock p{color:var(--muted);font-size:14px;margin-bottom:26px;max-width:320px}
+.dots{display:flex;gap:12px;margin-bottom:28px}
+.dots i{width:14px;height:14px;border-radius:50%;border:2px solid var(--rose2);transition:all .2s}
+.dots i.on{background:var(--rose);border-color:var(--rose);transform:scale(1.15);box-shadow:0 0 12px var(--rose)}
+.dots.shake{animation:shake .5s}
+.dots.shake i{border-color:#ff4d4d;background:#ff4d4d}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.pad{display:grid;grid-template-columns:repeat(3,72px);gap:14px}
+.pad button{height:72px;border-radius:50%;border:1px solid rgba(255,179,200,.25);background:rgba(255,255,255,.06);color:var(--text);font-size:26px;font-family:'Playfair Display',serif;cursor:pointer;transition:all .15s;backdrop-filter:blur(6px)}
+.pad button:hover{background:rgba(255,93,143,.25)}
+.pad button:active{transform:scale(.9);background:var(--rose)}
+.pad .fn{font-size:18px;color:var(--muted)}
+#msg{height:22px;margin-top:20px;font-size:14px;color:var(--rose2)}
+
+/* ===== CONTENT ===== */
+#site{display:none;position:relative;z-index:2}
+#site.show{display:block}
+section{padding:90px 20px;max-width:960px;margin:0 auto}
+.title{text-align:center;font-size:clamp(28px,5vw,42px);margin-bottom:10px}
+.sub{text-align:center;color:var(--muted);margin-bottom:44px}
+.reveal{opacity:0;transform:translateY(30px);transition:all .9s ease}
+.reveal.show{opacity:1;transform:none}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 20px;
+  background:radial-gradient(ellipse at 50% 30%,#4a1630 0%,var(--bg) 70%)}
+.hero .tag{letter-spacing:.35em;font-size:13px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(38px,9vw,84px);line-height:1.1}
+.hero h1 span{color:var(--rose)}
+.hero .to{font-size:clamp(32px,7vw,60px);color:var(--rose2);margin:14px 0}
+.hero p{color:var(--muted);max-width:500px}
+
+/* flower */
+.bouquet{font-size:clamp(70px,16vw,120px);margin:10px 0;filter:drop-shadow(0 10px 30px rgba(255,93,143,.5));animation:sway 4s ease-in-out infinite;transform-origin:bottom center}
+@keyframes sway{50%{transform:rotate(4deg)}}
+
+.btn{display:inline-block;margin-top:28px;padding:14px 34px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--rose),#c2185b);color:#fff;font:500 16px 'Be Vietnam Pro',sans-serif;cursor:pointer;text-decoration:none;box-shadow:0 10px 30px rgba(255,93,143,.35);transition:transform .25s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+
+.wishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.wish{background:rgba(255,255,255,.05);border:1px solid rgba(255,179,200,.2);border-radius:22px;padding:28px 22px;text-align:center;backdrop-filter:blur(6px);transition:transform .3s}
+.wish:hover{transform:translateY(-6px)}
+.wish .ic{font-size:38px;margin-bottom:10px}
+.wish h3{font-size:20px;margin-bottom:6px;color:var(--gold)}
+.wish p{font-size:15px;color:var(--muted)}
+
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.rcard{position:relative;height:170px;perspective:900px;cursor:pointer}
+.rcard>div{position:absolute;inset:0;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;backface-visibility:hidden;transition:transform .7s}
+.rcard .f{background:rgba(224,38,79,.14);border:1px solid rgba(255,143,168,.3);font-size:40px}
+.rcard .f small{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;color:var(--muted);margin-top:6px;letter-spacing:.08em}
+.rcard .b{background:linear-gradient(135deg,var(--rose),#8e1235);transform:rotateY(180deg);font-size:15px;line-height:1.6}
+.rcard .b em{font-style:normal;font-size:22px;margin-bottom:6px}
+.rcard:nth-child(even) .b{background:linear-gradient(135deg,#f5a04a,#c4561a)}
+.rcard.flip .f{transform:rotateY(180deg)}
+.rcard.flip .b{transform:rotateY(0)}
+.progress{text-align:center;margin-top:22px;color:var(--gold);font-size:15px}
+
+.letter{background:linear-gradient(160deg,#fff6ea,#ffe8d6);color:#4a2a2a;border-radius:8px;padding:clamp(28px,6vw,60px);box-shadow:0 30px 70px rgba(0,0,0,.5);transform:rotate(-.6deg)}
+.letter h2{color:#a3194f;margin-bottom:16px}
+.letter p{font-size:18px;margin-bottom:14px}
+.letter .sign{text-align:right;font-size:34px;color:#a3194f;margin-top:18px}
+
+.final{text-align:center;padding:80px 20px 110px}
+.final .script{font-size:clamp(34px,7vw,58px);color:var(--rose2)}
+#hugMsg{margin-top:20px;min-height:30px;color:var(--gold);font-size:18px}
+
+#music{position:fixed;right:16px;bottom:16px;z-index:10;width:48px;height:48px;border-radius:50%;border:none;background:var(--rose);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 8px 24px rgba(255,93,143,.5);display:none}
+#site.show ~ #music{display:block}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<!-- ===== LOCK ===== -->
+<!-- mèo cam (dùng lại bằng <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="orange-cat" viewBox="0 0 200 180">
+    <g class="ear-l"><path d="M32 78 L40 14 L88 48 Z" fill="#f5a04a"/><path d="M45 62 L48 32 L72 50 Z" fill="#ffb3c8"/></g>
+    <g class="ear-r"><path d="M168 78 L160 14 L112 48 Z" fill="#f5a04a"/><path d="M155 62 L152 32 L128 50 Z" fill="#ffb3c8"/></g>
+    <ellipse cx="100" cy="100" rx="76" ry="66" fill="#f5a04a"/>
+    <path d="M100 38 L100 58 M82 42 L86 60 M118 42 L114 60" stroke="#d9772b" stroke-width="6" stroke-linecap="round"/>
+    <path d="M26 96 L44 100 M26 114 L44 112 M174 96 L156 100 M174 114 L156 112" stroke="#d9772b" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="100" cy="126" rx="34" ry="24" fill="#fff4e6"/>
+    <ellipse class="eye" cx="70" cy="92" rx="9" ry="12" fill="#2b1810"/>
+    <ellipse class="eye" cx="130" cy="92" rx="9" ry="12" fill="#2b1810"/>
+    <circle cx="73" cy="88" r="3" fill="#fff"/><circle cx="133" cy="88" r="3" fill="#fff"/>
+    <path d="M92 112 L108 112 L100 122 Z" fill="#ff7a93"/>
+    <path d="M100 122 L100 130 M100 130 Q90 138 82 130 M100 130 Q110 138 118 130" stroke="#7a3a1c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M56 120 L24 114 M56 128 L26 134 M144 120 L176 114 M144 128 L174 134" stroke="#fff4e6" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<div id="lock">
+  <div class="duo"><svg class="cat"><use href="#orange-cat"/></svg><span class="rose">🌹</span></div>
+  <h1>Một món quà dành cho chị</h1>
+  <p id="hint"></p>
+  <div class="dots" id="dots"></div>
+  <div class="pad" id="pad"></div>
+  <div id="msg"></div>
+</div>
+
+<!-- ===== SITE ===== -->
+<div id="site">
+  <div class="hero">
+    <div class="tag">20 · 10 · 2026</div>
+    <h1>Chúc mừng ngày <span>Phụ nữ Việt Nam</span></h1>
+    <div class="duo"><span class="rose">🌹</span><svg class="cat"><use href="#orange-cat"/></svg><span class="rose">🌹</span></div>
+    <div class="to script" id="toName"></div>
+    <p>Hôm nay là ngày của chị, nhưng với em, ngày nào chị cũng xứng đáng được yêu thương như thế.</p>
+    <a href="#wishes" class="btn">Xem lời chúc ♥</a>
+  </div>
+
+  <section id="wishes">
+    <h2 class="title reveal">Những điều em muốn chúc chị</h2>
+    <p class="sub reveal">Từ trái tim em gửi đến chị</p>
+    <div class="wishes" id="wishList"></div>
+  </section>
+
+  <section>
+    <h2 class="title reveal">Lý do em yêu chị</h2>
+    <p class="sub reveal">Chạm vào từng bông hồng để xem nhé 🌹</p>
+    <div class="reasons reveal" id="reasons"></div>
+    <div class="progress" id="progress"></div>
+  </section>
+
+  <section>
+    <div class="letter reveal">
+      <h2 id="lt"></h2>
+      <p id="l1"></p><p id="l2"></p><p id="l3"></p>
+      <div class="sign script" id="sign"></div>
+    </div>
+  </section>
+
+  <div class="final reveal">
+    <div class="script">Cảm ơn chị vì đã là chị ♥</div>
+    <button class="btn" id="hug">Gửi em một cái ôm 🤗</button>
+    <div id="hugMsg"></div>
+  </div>
+</div>
+
+<button id="music" title="Bật/tắt nhạc">♪</button>
+<audio id="audio" loop src="music.mp3"></audio>
+
+<script>
+/* ============ CHỈNH SỬA Ở ĐÂY ============ */
+const CONFIG = {
+  music: {youtube: ""},   // dán link YouTube của bài "Only You" – Joseph Vincent vào đây
+  toName: "Gửi người em thương",
+  from: "Em",
+  hint: "Nhập 8 chữ số để mở quà nhé 💕",
+  wishes: [
+    {ic:"🌹", t:"Luôn xinh đẹp", p:"Không chỉ ở vẻ ngoài, mà ở cả tâm hồn dịu dàng của chị."},
+    {ic:"😊", t:"Luôn hạnh phúc", p:"Mong mỗi ngày của chị đều có thật nhiều tiếng cười."},
+    {ic:"💪", t:"Luôn mạnh mẽ", p:"Chị giỏi hơn chị nghĩ nhiều, và em luôn tự hào về chị."},
+    {ic:"🐱", t:"Luôn được yêu thương", p:"Em sẽ ở đây, yêu chị hôm nay và cả những ngày sau."}
+  ],
+  reasons: [
+    "Chị là động lực là liều thuốc tinh thần hữu hiệu nhất với em.",
+    "Chị dịu dàng với em, là chổ dựa tinh thần của em.",
+    "Với em chị là tất cả là thế giới mà em đang tìm kiếm.",
+    "Bên chị, em được là chính mình, không cần gồng gì cả.",
+    "Chị luôn lắng nghe, ngay cả khi em nói những chuyện linh tinh hay những lúc em than vãn.",
+    "Chỉ cần có chị, ngày nào cũng là một ngày tuyệt vời hết luôn á."
+  ],
+  letterTitle: "Gửi chị, cô gái của em,",
+  letter: [
+    "Nhân ngày Phụ nữ Việt Nam 20/10, em muốn nói lời cảm ơn chị vì đã đến bên em đồng hành với em và làm cuộc sống của em dịu dàng hơn rất nhiều.",
+    "Chị là người mà em yêu hết mình. Có những lúc chị mệt, em mong chị nhớ rằng chị không cô đơn, vì luôn có em ở phía sau, em sẽ là chổ dựa tinh thần cho chị.",
+    "Chúc chị một ngày 20/10 thật ngọt ngào, thật nhiều hoa và thật nhiều yêu thương. Em yêu chị."
+  ],
+  sign: "Khánh người yêu chị bằng cả tấm lòng",
+  hugReplies: ["Em ôm chị thật chặt! 🤗", "Chị là điều tuyệt vời nhất của em 💗", "Yêu chị nhiều lắm! 🌹"]
+};
+/* ========================================== */
+
+
+const HASH = 2933072073563879, SALT = "wd2026:", LEN = 8;
+function cyrb53(str, seed = 0){
+  let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;
+  for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}
+  h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);
+  h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);
+  return 4294967296*(2097151&h2)+(h1>>>0);
+}
+const $ = id => document.getElementById(id);
+$('hint').textContent = CONFIG.hint;
+
+/* ----- lock UI ----- */
+let code = "", locked = false;
+const dots = $('dots');
+dots.innerHTML = Array.from({length:LEN},()=>'<i></i>').join('');
+$('pad').innerHTML = [1,2,3,4,5,6,7,8,9,'C',0,'⌫'].map(k =>
+  `<button data-k="${k}" class="${isNaN(k)?'fn':''}">${k}</button>`).join('');
+function render(){[...dots.children].forEach((d,i)=>d.classList.toggle('on',i<code.length))}
+function press(k){
+  if(locked) return;
+  $('msg').textContent = "";
+  if(k==='C') code = "";
+  else if(k==='⌫') code = code.slice(0,-1);
+  else if(code.length<LEN) code += k;
+  render();
+  if(code.length===LEN) check();
+}
+function check(){
+  locked = true;
+  setTimeout(()=>{
+    if(cyrb53(SALT+code)===HASH){ unlock(); }
+    else{
+      dots.classList.add('shake'); $('msg').textContent = "Chưa đúng rồi, thử lại nhé 🥺";
+      setTimeout(()=>{dots.classList.remove('shake');code="";render();locked=false},600);
+    }
+  },200);
+}
+$('pad').addEventListener('click',e=>{const b=e.target.closest('button');if(b)press(b.dataset.k)});
+addEventListener('keydown',e=>{
+  if(!$('lock')||$('lock').classList.contains('hide')) return;
+  if(/^\d$/.test(e.key)) press(e.key);
+  else if(e.key==='Backspace') press('⌫');
+  else if(e.key==='Escape') press('C');
+});
+
+/* ----- build content ----- */
+function build(){
+  $('toName').textContent = CONFIG.toName;
+  $('wishList').innerHTML = CONFIG.wishes.map(w=>
+    `<div class="wish reveal"><div class="ic">${w.ic}</div><h3>${w.t}</h3><p>${w.p}</p></div>`).join('');
+  const total = CONFIG.reasons.length;
+  $('reasons').innerHTML = CONFIG.reasons.map((r,i)=>
+    `<div class="rcard"><div class="f">🌹<small>Lý do số ${i+1}</small></div><div class="b"><em>${i%2?'🐾':'🌹'}</em>${r}</div></div>`).join('');
+  $('progress').textContent = `Đã mở 0/${total} lý do`;
+  $('reasons').addEventListener('click',e=>{
+    const c=e.target.closest('.rcard'); if(!c) return;
+    c.classList.toggle('flip');
+    const n=document.querySelectorAll('.rcard.flip').length;
+    $('progress').textContent = n===total ? 'Và còn rất nhiều lý do nữa em chưa kể hết 💕' : `Đã mở ${n}/${total} lý do`;
+  });
+  $('lt').textContent = CONFIG.letterTitle;
+  $('l1').textContent = CONFIG.letter[0]; $('l2').textContent = CONFIG.letter[1]; $('l3').textContent = CONFIG.letter[2];
+  $('sign').textContent = CONFIG.sign;
+  const io = new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+function unlock(){
+  build();
+  $('lock').classList.add('hide');
+  $('site').classList.add('show');
+  burst(innerWidth/2, innerHeight/2, 60);
+  try{ startMusic(); }catch(e){}
+  setTimeout(()=>$('lock').remove(),1000);
+}
+
+/* ----- hug button ----- */
+let hugN = 0;
+$('hug').onclick = e => {
+  $('hugMsg').textContent = CONFIG.hugReplies[hugN++ % CONFIG.hugReplies.length];
+  burst(e.clientX, e.clientY, 30);
+};
+
+/* ----- petals & hearts ----- */
+const cv = $('fx'), cx = cv.getContext('2d');
+let W,H,ps=[];
+function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+resize(); addEventListener('resize',resize);
+const EMO = ["🌹","🌹","🐾","🧡","🐈","✨"];
+function fall(){ps.push({x:Math.random()*W,y:-20,s:14+Math.random()*16,vy:.6+Math.random()*1.2,vx:0,w:Math.random()*6,e:EMO[Math.random()*EMO.length|0],o:.5+Math.random()*.4,g:0})}
+function burst(x,y,n){for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,v=2+Math.random()*5;
+  ps.push({x,y,s:14+Math.random()*14,vy:Math.sin(a)*v,vx:Math.cos(a)*v,w:Math.random()*6,e:EMO[Math.random()*EMO.length|0],o:1,g:.12})}}
+(function loop(){
+  cx.clearRect(0,0,W,H);
+  if(Math.random()<.06) fall();
+  cx.textAlign="center";
+  ps.forEach(p=>{p.w+=.03;p.vy+=p.g;p.x+=p.vx+Math.sin(p.w)*.5;p.y+=p.vy;p.vx*=.99;
+    cx.globalAlpha=p.o;cx.font=p.s+"px serif";cx.fillText(p.e,p.x,p.y)});
+  cx.globalAlpha=1;
+  ps=ps.filter(p=>p.y<H+30&&p.x>-30&&p.x<W+30);
+  requestAnimationFrame(loop);
+})();
+addEventListener('click',e=>{if(!$('lock')) burst(e.clientX,e.clientY,6)});
+
+/* ----- music ----- */
+/* Nhạc nền: dán link YouTube bài "Only You" – Joseph Vincent vào CONFIG.music.youtube
+   (hoặc đặt file music.mp3 cạnh trang này nếu không dùng YouTube). */
+const a=$('audio'),mb=$('music');
+let playing=false, yt=null;
+function ytId(u){const m=(u||"").match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:((u||"").match(/^[\w-]{11}$/)?u:null)}
+function startMusic(){
+  const id=ytId(CONFIG.music.youtube);
+  if(id){
+    if(!yt){yt=document.createElement('iframe');yt.allow="autoplay";yt.style.cssText="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;border:0;left:-10px;bottom:0";
+      yt.src=`https://www.youtube.com/watch?v=ldDpNHpPWX4/embed/${id}?autoplay=1&loop=1&playlist=${id}&playsinline=1`;document.body.appendChild(yt)}
+  }else{a.play().catch(()=>{})}
+  playing=true;mb.textContent='❚❚';
+}
+function stopMusic(){if(yt){yt.remove();yt=null}a.pause();playing=false;mb.textContent='♪'}
+mb.onclick=()=>playing?stopMusic():startMusic();
+</script>
+</body>
+</html>
